@@ -1,0 +1,166 @@
+/* Reset default styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Container utama */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul aplikasi */
+.title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Bagian Bulan dan Tanggal */
+.header {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Tambahkan jarak antar input */
+  margin-bottom: 30px;
+}
+
+.header div {
+  flex: 1;
+}
+
+.header label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.header input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Bagian To-Do dan Prioritas */
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.column {
+  flex: 1;
+}
+
+.column h3 {
+  margin-bottom: 10px;
+}
+
+.list {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  min-height: 150px;
+  background: #f9f9f9;
+  overflow-y: auto;
+}
+
+.add-btn {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  background: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.add-btn:hover {
+  background: #0056b3;
+}
+
+/* Bagian Notes dan Reminder */
+.notes-reminders {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Jarak antar kolom Notes dan Reminder */
+  margin-top: 30px; /* Jarak atas */
+}
+
+.notes, .reminders {
+  flex: 1;
+}
+
+.notes h3, .reminders h3 {
+  margin-bottom: 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  resize: none;
+  background: #f9f9f9;
+}
+
+/* Animation for Removing Items */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+.list-item.removing {
+  animation: fadeOut 0.5s forwards;
+}
+
+/* Responsivitas untuk layar kecil */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    margin-bottom: 20px; /* Jarak bawah lebih kecil */
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 20px; /* Jarak antar elemen vertikal */
+  }
+
+  .notes-reminders {
+    flex-direction: column;
+    gap: 20px; /* Jarak antar Notes dan Reminder */
+    margin-top: 20px; /* Jarak atas lebih kecil */
+  }
+}
+
+/* Responsivitas untuk layar besar */
+@media (min-width: 768px) {
+  .header {
+    margin-bottom: 40px; /* Jarak bawah lebih besar */
+  }
+
+  .notes-reminders {
+    gap: 40px; /* Jarak antar kolom Notes dan Reminder lebih besar */
+  }
+}

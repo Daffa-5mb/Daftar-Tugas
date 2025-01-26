@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">DAFTAR TUGAS</h1>
+    <div class="header">
+      <div>
+        <label for="month">BULAN:</label>
+        <input type="text" id="month" placeholder="Masukan Bulan">
+      </div>
+      <div>
+        <label for="date">TANGGAL:</label>
+        <input type="text" id="date" placeholder="Masukan Tanggal">
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="column">
+        <h3>TUGAS</h3>
+        <div class="list" id="toDoSection">
+          <!-- Task Items Will Be Added Here -->
+        </div>
+        <button class="add-btn" onclick="addItem('toDoSection')">+ Tambahkan Tugas</button>
+      </div>
+      <div class="column">
+        <h3>PRIORITAS:</h3>
+        <div class="list" id="prioritiesSection">
+          <!-- Priority Items Will Be Added Here -->
+        </div>
+        <button class="add-btn" onclick="addItem('prioritiesSection')">+ Tanbahkan Prioritas</button>
+      </div>
+    </div>
+
+    <div class="notes-reminders">
+      <div class="notes">
+        <h3>CATATAN</h3>
+        <textarea id="notes" placeholder="Tulis catatan anda di sini"></textarea>
+      </div>
+      <div class="reminders">
+        <h3>PENGINGAT</h3>
+        <textarea id="reminder" placeholder="Tulis pengingat anda di sini"></textarea>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
